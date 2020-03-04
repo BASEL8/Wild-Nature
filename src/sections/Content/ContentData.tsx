@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { PlayCircle } from '@styled-icons/boxicons-regular/PlayCircle'
-
+import { UsaMap } from './components'
 type DataType = {
   title: string;
   subTitle: string;
@@ -10,8 +10,7 @@ type DataType = {
   text: string
 }
 export const ContentData = ({ data }: { data: DataType }) => {
-  const { title, subTitle, videoLink, image, text } = data;
-  console.log(data)
+  const { title, subTitle, image, text } = data;
   return (
     <Body theme={image}>
       <Top>
@@ -35,7 +34,12 @@ export const ContentData = ({ data }: { data: DataType }) => {
         </More>
       </Top>
       <Bottom>
-        bottom
+        <Map>
+          <h6>Territory of habitat</h6>
+          <UsaMap />
+        </Map>
+        <Info> info</Info>
+        <Images>images</Images>
       </Bottom>
     </Body>
   )
@@ -114,5 +118,43 @@ margin-right:20px;
 `
 const MoreInfo = styled.div``
 const Bottom = styled.div`
+z-index:5;
+color:white;
+min-height:200px;
+margin-top:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+width:100%;
+& > div{
+  height:100%;
+}
+`
+const Map = styled.div`
+flex:2;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+& h6 {
+  color:#F39129
+}
+`
+const Info = styled.div`
+flex:2;
+background-color:yellow;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
 
 `
+const Images = styled.div`
+flex:4;
+background-color:green;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+flex-wrap:wrap;
+` 
