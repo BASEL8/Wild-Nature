@@ -20,7 +20,7 @@ const data = [
     image: 'https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=935&q=80',
     videoLink: 'https://www.youtube.com/watch?v=F8eCgl6JG7k',
     states: ['wa', 'mt', 'sd', 'nd'],
-    conservationStatus: [{ code: 'ex', status: false }, { code: 'we', status: false }, { code: 'cr', status: false }, { code: 'ev', status: false }, { code: 'vw', status: false }, { code: 'nt', status: false }, { code: 'lc', status: true }],
+    conservationStatus: [{ code: 'ex', status: false }, { code: 'we', status: false }, { code: 'cr', status: false }, { code: 'ev', status: false }, { code: 'vw', status: false }, { code: 'nt', status: true }, { code: 'lc', status: true }],
     trinomialName: 'Odocoileus virginianus'
   }
 ]

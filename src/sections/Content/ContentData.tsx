@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { PlayCircle } from '@styled-icons/boxicons-regular/PlayCircle'
-import { UsaMap } from './components'
+import { UsaMap, ImagesSlider } from './components'
 type conservationType = {
   code: string,
   status: boolean;
@@ -57,7 +57,9 @@ export const ContentData = ({ data }: { data: DataType }) => {
             </StatusHolder>
           </div>
         </Info>
-        <Images></Images>
+        <Images>
+          <ImagesSlider />
+        </Images>
       </Bottom>
     </Body>
   )
@@ -93,6 +95,11 @@ color:white;
 padding:20px;
 text-transform: uppercase;
 width:30%;
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
 @media(max-width: 767px){
     width:100%;
   }
@@ -138,7 +145,7 @@ const MoreInfo = styled.div``
 const Bottom = styled.div`
 z-index:5;
 color:white;
-min-height:200px;
+height:300px;
 margin-top:30px;
 display:flex;
 align-items:center;
@@ -185,10 +192,10 @@ const StatusDiv = styled.div`
 margin-right :5px;
 padding:5px;
 border : 1px solid ${({ theme: { status } }) => status ? 'orange' : 'white'};
-width:15px;
-height:15px;
+width:10px;
+height:10px;
 border-radius:50%;
-font-size:10px;
+font-size:8px;
 display:flex;
 align-items:center;
 justify-content:center;

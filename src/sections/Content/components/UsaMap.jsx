@@ -11,5 +11,6 @@ export const UsaMap = ({ states }) => {
   );
 };
 const CustomMap = styled(SVGMap)`
+margin:20px;
 ${({ map: { locations }, states }) => locations.map(({ id }) => states.indexOf(id) > -1 ? `& path#${id}{fill:#F39129}` : `& path#${id}{fill:transparent;stroke-width:1px;stroke:white}`)}
 `
