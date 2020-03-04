@@ -20,6 +20,7 @@ export const ContentData = ({ data }: { data: DataType }) => {
 const Body = styled.div`
 height:100%;
 width:100%;
+filter: brightness(0.55);
 background-image:url(${({ theme }) => theme});
 background-repeat:no-repeat;
 background-position:center;

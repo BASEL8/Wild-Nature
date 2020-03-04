@@ -24,7 +24,6 @@ export const Content = ({ data }: { data: DataType[] }) => {
 }
 const Body = styled.div`
 height:100%;
-background:red;
 position:absolute;
 top:0;
 left:0;
@@ -33,12 +32,11 @@ z-index:1;
 `
 const CustomTabs = styled(Tabs)`
 display:flex;
-background:yellow;
 height:100%;
 `
 const CustomTabList = styled(TabList)`
 height:100%;
-background:blue;
+background:#F39129;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -48,19 +46,20 @@ width:50px;
 list-style:none
 `
 const CustomTab = styled(Tab)`
-border: 1px solid white;
 padding:5px;
 border-radius:50%;
 margin-bottom:5px;
+opacity: ${({ selected }) => selected ? 1 : 0.5};
+
 `
 const Dot = styled.div`
-height:5px;
-width:5px;
+height:10px;
+width:10px;
 background:white;
 border-radius:50%;
+cursor: pointer;
 `
 const CustomTabPanel = styled(TabPanel)`
-background:green;
 flex: ${({ selected }) => selected ? 1 : 0};
 display:flex;
 align-items:center;
