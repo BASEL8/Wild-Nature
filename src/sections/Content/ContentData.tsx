@@ -2,15 +2,22 @@ import React from 'react'
 import styled from 'styled-components';
 import { PlayCircle } from '@styled-icons/boxicons-regular/PlayCircle'
 import { UsaMap } from './components'
+type conservationType = {
+  code: string,
+  status: boolean;
+}
 type DataType = {
   title: string;
   subTitle: string;
   videoLink: string;
   image: string;
-  text: string
+  text: string;
+  states: string[],
+  conservationStatus: conservationType[],
+  trinomialName: string
 }
 export const ContentData = ({ data }: { data: DataType }) => {
-  const { title, subTitle, image, text } = data;
+  const { title, subTitle, image, text, states, conservationStatus, trinomialName } = data;
   return (
     <Body theme={image}>
       <Top>
@@ -36,10 +43,21 @@ export const ContentData = ({ data }: { data: DataType }) => {
       <Bottom>
         <Map>
           <h6>Territory of habitat</h6>
-          <UsaMap />
+          <UsaMap states={states} />
         </Map>
-        <Info> info</Info>
-        <Images>images</Images>
+        <Info>
+          <div>
+            <h6>Trinomial Name</h6>
+            <p>{trinomialName}</p>
+          </div>
+          <div>
+            <h6>conservation Status</h6>
+            <StatusHolder>
+              {conservationStatus.map(({ code, status }, i) => <StatusDiv theme={{ status }} key={i}>{code}</StatusDiv>)}
+            </StatusHolder>
+          </div>
+        </Info>
+        <Images></Images>
       </Bottom>
     </Body>
   )
@@ -135,7 +153,7 @@ const Map = styled.div`
 flex:2;
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:space-between;
 flex-direction:column;
 & h6 {
   color:#F39129
@@ -143,16 +161,42 @@ flex-direction:column;
 `
 const Info = styled.div`
 flex:2;
-background-color:yellow;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+flex-direction:column;
+margin-left:10px;
+& > div {
+  margin-bottom:15px;
+  width:100%;
+  flex:1;
+  & h6 {
+  color:#F39129;
+  margin-bottom:15px;
+}
+}
+`
+const StatusHolder = styled.div`
+display : flex;
+flex:1
+`
+const StatusDiv = styled.div`
+margin-right :5px;
+padding:5px;
+border : 1px solid ${({ theme: { status } }) => status ? 'orange' : 'white'};
+width:15px;
+height:15px;
+border-radius:50%;
+font-size:10px;
 display:flex;
 align-items:center;
 justify-content:center;
-flex-wrap:wrap;
-
+text-transform:uppercase;
+background-color:${({ theme: { status } }) => status ? 'orange' : 'transparent'}
 `
 const Images = styled.div`
 flex:4;
-background-color:green;
 display:flex;
 align-items:center;
 justify-content:flex-end;

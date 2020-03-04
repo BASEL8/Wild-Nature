@@ -5,18 +5,11 @@ import styled from "styled-components";
 
 
 
-export const UsaMap = () => {
-  const data = ['wy', "ak"]
-  const customUsa = {
-    ...Usa,
-    label: "Custom map label",
-    locations: Usa.locations.map((l, i) => { return { ...l, color: data.indexOf(l.id) > -1 } })
-
-  };
+export const UsaMap = ({ states }) => {
   return (
-    <CustomMap map={customUsa} />
+    <CustomMap map={Usa} states={states} />
   );
 };
 const CustomMap = styled(SVGMap)`
-${({ map: { locations } }) => locations.map(({ color, id }) => color ? `& path#${id}{fill:#F39129}` : `& path#${id}{fill:white}`)}
+${({ map: { locations }, states }) => locations.map(({ id }) => states.indexOf(id) > -1 ? `& path#${id}{fill:#F39129}` : `& path#${id}{fill:transparent;stroke-width:1px;stroke:white}`)}
 `

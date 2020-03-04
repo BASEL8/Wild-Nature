@@ -2,12 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { ContentData } from './ContentData'
+type conservationType = {
+  code: string,
+  status: boolean;
+}
 type DataType = {
   title: string;
   subTitle: string;
   videoLink: string;
   image: string;
-  text: string
+  text: string;
+  states: string[];
+  conservationStatus: conservationType[],
+  trinomialName: string
+
 }
 
 export const Content = ({ data }: { data: DataType[] }) => {

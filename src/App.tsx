@@ -8,14 +8,20 @@ const data = [
     subTitle: 'Species of america',
     text: 'The American red fox , commonly known as the eastern American red fox, is a North American subspecies of the red fox (Vulpes vulpes). Historically, red foxes were classified as two species: Vulpes vulpes in Eurasia and Vulpes fulva in the Americas (Tesky, 1995).',
     image: 'https://images.unsplash.com/photo-1540153448870-af780343526e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
-    videoLink: 'https://youtu.be/RCqQYpM1hCA'
+    videoLink: 'https://youtu.be/RCqQYpM1hCA',
+    states: ['wa', 'mt', 'id', 'or'],
+    conservationStatus: [{ code: 'ex', status: false }, { code: 'we', status: false }, { code: 'cr', status: false }, { code: 'ev', status: false }, { code: 'vw', status: false }, { code: 'nt', status: false }, { code: 'lc', status: true }],
+    trinomialName: 'Vulpes vulpes'
   },
   {
     title: 'White-tailed deer',
     subTitle: 'Species of america',
     text: 'The white-tailed deer (Odocoileus virginianus), also known as the whitetail or Virginia deer, is a medium-sized deer native to North America, Central America, Ecuador',
     image: 'https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=935&q=80',
-    videoLink: 'https://www.youtube.com/watch?v=F8eCgl6JG7k'
+    videoLink: 'https://www.youtube.com/watch?v=F8eCgl6JG7k',
+    states: ['wa', 'mt', 'sd', 'nd'],
+    conservationStatus: [{ code: 'ex', status: false }, { code: 'we', status: false }, { code: 'cr', status: false }, { code: 'ev', status: false }, { code: 'vw', status: false }, { code: 'nt', status: false }, { code: 'lc', status: true }],
+    trinomialName: 'Odocoileus virginianus'
   }
 ]
 function App() {
