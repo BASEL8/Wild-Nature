@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Wild-Nature/static/css/main.c6cdc1bd.chunk.css",
-    "main.js": "/Wild-Nature/static/js/main.630ecbac.chunk.js",
-    "main.js.map": "/Wild-Nature/static/js/main.630ecbac.chunk.js.map",
+    "main.js": "/Wild-Nature/static/js/main.86b45956.chunk.js",
+    "main.js.map": "/Wild-Nature/static/js/main.86b45956.chunk.js.map",
     "runtime-main.js": "/Wild-Nature/static/js/runtime-main.59b96285.js",
     "runtime-main.js.map": "/Wild-Nature/static/js/runtime-main.59b96285.js.map",
-    "static/js/2.a5b17248.chunk.js": "/Wild-Nature/static/js/2.a5b17248.chunk.js",
-    "static/js/2.a5b17248.chunk.js.map": "/Wild-Nature/static/js/2.a5b17248.chunk.js.map",
+    "static/js/2.424a991b.chunk.js": "/Wild-Nature/static/js/2.424a991b.chunk.js",
+    "static/js/2.424a991b.chunk.js.map": "/Wild-Nature/static/js/2.424a991b.chunk.js.map",
     "index.html": "/Wild-Nature/index.html",
-    "precache-manifest.b27bb5f7105f2a589304f173ee0c4427.js": "/Wild-Nature/precache-manifest.b27bb5f7105f2a589304f173ee0c4427.js",
+    "precache-manifest.35a17edee4453706a63a1c705a586b01.js": "/Wild-Nature/precache-manifest.35a17edee4453706a63a1c705a586b01.js",
     "service-worker.js": "/Wild-Nature/service-worker.js",
     "static/css/main.c6cdc1bd.chunk.css.map": "/Wild-Nature/static/css/main.c6cdc1bd.chunk.css.map",
-    "static/js/2.a5b17248.chunk.js.LICENSE.txt": "/Wild-Nature/static/js/2.a5b17248.chunk.js.LICENSE.txt"
+    "static/js/2.424a991b.chunk.js.LICENSE.txt": "/Wild-Nature/static/js/2.424a991b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.59b96285.js",
-    "static/js/2.a5b17248.chunk.js",
+    "static/js/2.424a991b.chunk.js",
     "static/css/main.c6cdc1bd.chunk.css",
-    "static/js/main.630ecbac.chunk.js"
+    "static/js/main.86b45956.chunk.js"
   ]
 }
