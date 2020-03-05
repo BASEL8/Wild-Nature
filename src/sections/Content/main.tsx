@@ -5,7 +5,7 @@ import { ContentData } from './ContentData'
 type conservationType = {
   code: string,
   status: boolean;
-}
+};
 type DataType = {
   title: string;
   subTitle: string;
@@ -14,8 +14,8 @@ type DataType = {
   text: string;
   states: string[];
   conservationStatus: conservationType[],
-  trinomialName: string
-
+  trinomialName: string,
+  information: { homePage: { src: string, type: string }[] };
 }
 
 export const Content = ({ data }: { data: DataType[] }) => {

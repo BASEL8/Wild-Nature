@@ -2,8 +2,10 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from 'styled-components';
-
-export const ImagesSlider: React.FC<{}> = () => {
+type Props = {
+  information: { homePage: { src: string, type: string }[] };
+}
+export const ImagesSlider: React.FC<Props> = ({ information: { homePage } }) => {
   return (
     <CustomCarousel
       showThumbs={false}
@@ -14,7 +16,26 @@ export const ImagesSlider: React.FC<{}> = () => {
       showIndicators={false}
       width="300px"
     >
-      <div className="my-slide primary">
+      {homePage.map(({ type, src }, i) => {
+        if (type === 'video') {
+          return <Video>
+            <iframe width="560" height="315" src={src} />
+          </Video>
+        }
+        if (type === 'image') {
+          return <Image>
+            <img src={src} alt={src} />
+          </Image>
+        }
+        if (type === 'text') {
+          return <Text>
+            <p>{src}</p>
+          </Text>
+        }
+        return <div></div>
+
+      })}
+      {/* <div className="my-slide primary">
         <h1>
           Presentation mode
 </h1>
@@ -154,48 +175,57 @@ export const ImagesSlider: React.FC<{}> = () => {
         <h1>
           Thanks...
 </h1>
-      </div>
+      </div> */}
     </CustomCarousel>
   )
 }
 const CustomCarousel = styled(Carousel)`
-height:100%;
-justify-content:flex-end;
+    height:100%;
+    justify-content:flex-end;
 &>.carousel.carousel-slider {
-  overflow: unset;
-  height: 100%;
-  & div.slider-wrapper {
+        overflow: unset;
     height: 100%;
+  & div.slider-wrapper {
+        height: 100%;
     &> ul.slider.animated {
-      height: 100%;
+        height: 100%;
       &>li.slide {
         height: 100%;
-        background-color: unset;
-        display:flex;
-        justify-content:center;
-        align-items:center;
+    background-color: unset;
+    display:flex;
+    justify-content:center;
+    align-items:center;
         & > div iframe{
-          width:100%;
-          margin:0 
-        }
-      }
-      ;
-    }
-    ;
+        width:100%;
+    margin:0
   }
-  &>.control-arrow.control-next,
+}
+;
+}
+;
+}
+&>.control-arrow.control-next,
   & .control-arrow.control-prev {
-    bottom: unset;
+        bottom: unset;
     margin-top: unset;
     padding: unset;
   }
   ;
   &>.control-arrow.control-next {
-    left: -50px
+        left: -50px
   }
   ;
   & .control-arrow.control-prev {
-    left: -100px;
+        left: -100px;
   }
 }
+`
+const Image = styled.div`
+
+`
+const Video = styled.div`
+
+`
+const Text = styled.div`
+
 `

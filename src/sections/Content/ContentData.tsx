@@ -12,12 +12,13 @@ type DataType = {
   videoLink: string;
   image: string;
   text: string;
-  states: string[],
-  conservationStatus: conservationType[],
-  trinomialName: string
+  states: string[];
+  conservationStatus: conservationType[];
+  trinomialName: string;
+  information: { homePage: { src: string, type: string }[] };
 }
 export const ContentData = ({ data }: { data: DataType }) => {
-  const { title, subTitle, image, text, states, conservationStatus, trinomialName } = data;
+  const { title, subTitle, image, text, states, conservationStatus, trinomialName, information } = data;
   return (
     <Body theme={image}>
       <Top>
@@ -58,7 +59,7 @@ export const ContentData = ({ data }: { data: DataType }) => {
           </div>
         </Info>
         <Images>
-          <ImagesSlider />
+          <ImagesSlider information={information} />
         </Images>
       </Bottom>
     </Body>
