@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3df77f1413c1607084d4720f1047bdfc",
+    "revision": "8a9c130e62dcc245d1a1af8bb45c9d4e",
     "url": "/Wild-Nature/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wild-Nature/static/css/2.3c1ddb0a.chunk.css"
   },
   {
-    "revision": "affca1fb2b362570dbdc",
+    "revision": "6c4d5ce6bd37d430c802",
     "url": "/Wild-Nature/static/css/main.c6cdc1bd.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wild-Nature/static/js/2.72a13b74.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "affca1fb2b362570dbdc",
-    "url": "/Wild-Nature/static/js/main.975332a0.chunk.js"
+    "revision": "6c4d5ce6bd37d430c802",
+    "url": "/Wild-Nature/static/js/main.e5fa96a0.chunk.js"
   },
   {
     "revision": "ec7dc943c38e11464dce",
